@@ -1,0 +1,158 @@
+:root {
+    --color-task-background: rgb(50, 195, 205);
+    --color-remove-background: rgb(235, 103, 80);
+    --medieval-font: 'MedievalSharp', cursive;
+}
+
+.form {
+    width: 60%;
+    position: relative;
+    display: flex;
+  }
+  .task-input {
+    background-color: var(--color-white);
+    border-radius: 2rem;
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    font-size: 1.5rem;
+    transition: 0.2s;
+    box-shadow: inset 0 0 4px var(--color-black);
+  }
+  .task-input:focus {
+    outline: none;
+    box-shadow: 0 0 10px 1000px var(--transparent-black);
+  }
+  .task-submit {
+    position: absolute;
+    right: 2px;
+    margin: .4rem;
+    padding: .6rem;
+    font-size: 1.5rem;
+    border-radius: 2rem;
+    border: none;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    transition: 0.2s all;
+    box-shadow: 0 0 10px var(--transparent-black);
+  }
+  .task-submit:hover {
+    background-color: var(--color-light-primary);
+  }
+  .task-submit:active{
+    transform: scale(0.8);
+    transition: 0.1s all;
+    box-shadow: 0 0 5px;
+  }
+  .container {
+      display: flex;
+      width: 95%;
+      margin-top: 1rem;
+      justify-content: space-between;
+      align-items: flex-start;
+  }
+  .todos {
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    background-color: var(--color-task-background);
+    padding-bottom: 1rem;
+    margin: .7rem 0 1.5rem 0;
+    /* color: var(--color-white); */
+  }
+  .align > span {
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 .5rem;
+  }
+  .align > span > span {
+    padding: 0 .4rem;
+
+  }
+  .remove {
+      background-color: var(--color-remove-background);
+  }
+  .single-todo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    border-radius: 5px;
+    margin-top: 1rem;
+    padding: 1rem;
+    transition: 0.2s;
+    background-position: center;
+    background-color: yellowgreen;
+    background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?w=740");
+  }
+  .single-todo:hover{
+      box-shadow: 0 0 5px var(--color-black);
+      transform: scale(1.03);
+  }
+  .single-todo-text{
+    display: flex;
+    flex: 1;
+    padding: 5px;
+    border: none;
+    font-size: 1rem;
+    width: 80%;
+    overflow-x:auto;
+  }
+  .single-todo-text:focus{
+    outline: none;
+  }
+  .placeholder {
+    margin-top: 10px;
+  }
+  .icon{
+    margin-left: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .todos-headings{
+      margin-top: 1rem;
+      text-align: center;
+      color: var(--color-white);
+      font-size: 1.5rem;
+      font-family: var(--medieval-font);
+  }
+  /* @media (max-width: 1200px){
+    .single-todo{
+      width: 95%;
+    }
+  } */
+  @media (max-width: 900px){
+    .form{
+      width: 70%;
+    }
+    .todos {
+      width: 70%;
+      margin: 1rem;
+  }
+  }
+  @media (max-width: 700px){
+    .form{
+      width: 90%;
+    }
+    .todos {
+      width: 90%;
+      margin: 1rem;
+  }
+    .container{
+        flex-direction: column;
+    }
+    .todos {
+        width: 90%;
+        margin: 1rem;
+    }
+    .remove {
+        margin-top: 1rem;
+    }
+    .single-todo {
+        width: 90%;
+    }
+  }
